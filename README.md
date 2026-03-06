@@ -1,6 +1,6 @@
 # WNBA Stats Analysis · LA Sparks 2025
 
-Statistical analysis of the LA Sparks' 2025 WNBA season, pulling live data from the public stats.wnba.com API.
+Statistical analysis of the LA Sparks' 2025 WNBA season, pulling live data from the ESPN public API.
 
 ## 4 Major Takeaways
 
@@ -9,6 +9,8 @@ Statistical analysis of the LA Sparks' 2025 WNBA season, pulling live data from 
 3. **Top Performers** - Points, assists, and rebounds for the top 5 players
 4. **Point Differential** - Win/loss margins across the season with average differential
 
+![LA Sparks 2025 Analysis](assets/sparks_2025_analysis.png)
+
 ## Setup
 
 ```bash
@@ -16,8 +18,8 @@ pip install -r requirements.txt
 python analysis.py
 ```
 
-Output is saved to `output/sparks_2025_analysis.png`.
+Output is saved to `assets/sparks_2025_analysis.png`.
 
 ## Data Source
 
-[stats.wnba.com](https://stats.wnba.com) — public stats API, no API key required.
+[ESPN Public API](https://site.api.espn.com) — no API key required.

@@ -27,7 +27,7 @@ ESPN_CORE = (
     "/sports/basketball/leagues/wnba"
 )
 SPARKS_NAME = "Los Angeles Sparks"
-OUTPUT_DIR = "output"
+OUTPUT_DIR = "assets"
 
 SPARKS_PURPLE = "#552583"
 SPARKS_GOLD = "#FDB927"

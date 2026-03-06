@@ -252,10 +252,10 @@ def main():
     if available:
         keys, labels = zip(*available)
         sparks_vals = [
-            float(sparks_stats[k] or 0) * 100 for k in keys
+            float(sparks_stats[k] or 0) for k in keys
         ]
         league_vals = [
-            float(league_df[k].mean() or 0) * 100 for k in keys
+            float(league_df[k].mean() or 0) for k in keys
         ]
         x = np.arange(len(labels))
         w = 0.35
@@ -365,7 +365,7 @@ def main():
     sparks_ft = sparks_stats.get("freeThrowPct")
 
     def pct(v):
-        return f"{float(v) * 100:.1f}%" if v is not None else "N/A"
+        return f"{float(v):.1f}%" if v is not None else "N/A"
 
     sep = "-" * 55
     print(f"\n{sep}")

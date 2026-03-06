@@ -1,37 +1,91 @@
-# WNBA Stats Analysis · LA Sparks 2025
+# LA Sparks 2025 — Season Performance Analysis
 
-Statistical analysis of the LA Sparks' 2025 WNBA season, pulling live data from the ESPN public API.
+This project analyzes LA Sparks box score and game log data from the 2025 WNBA season
+to evaluate scoring trends, shooting efficiency, player contribution, and game margins.
 
-## 4 Major Takeaways
-
-1. **Scoring Output** - Game-by-game points with 5-game rolling average vs league average
-2. **Shooting Efficiency** - FG%, 3P%, and FT% compared to league averages
-3. **Top Performers** - Points, assists, and rebounds for the top 5 players
-4. **Point Differential** - Win/loss margins across the season with average differential
-
-![LA Sparks 2025 Analysis](assets/sparks_2025_analysis.png)
+The goal is to demonstrate how statistical insights can support game preparation,
+roster evaluation, and coaching decision-making heading into the 2026 season.
 
 ---
 
-## 2026 Coaching Points of Emphasis
+## Tools Used
 
-Based on the 2025 season data (22W–23L, -2.5 avg point margin, Kelsey Plum 19.5 PPG, FG 45.7%, 3P 33.7%, FT 76.9%):
-
-### 1. Win the Close Games
-The Sparks finished just one game below .500 with an average margin of only -2.5 points — meaning most losses were decided late. The priority for 2026 is execution down the stretch: late-game offensive sets, disciplined ball movement, and defending without fouling in crunch time. A team this close to .500 doesn't need a roster overhaul; it needs composure.
-
-### 2. Build a Second Scoring Option Around Kelsey Plum
-Kelsey Plum's 19.5 PPG is elite, but over-reliance on one scorer makes the offense predictable and leaves the team exposed when she's off or double-teamed. Developing a consistent secondary scorer (15+ PPG) would take defensive pressure off Plum and open more opportunities throughout the lineup. Look to second-year players or targeted free agency to fill this role.
-
-### 3. Improve Three-Point Efficiency and Volume
-A 33.7% three-point percentage is below the threshold where volume shooting pays off. The coaching staff should identify which players are shooting within their range and which are forcing shots. Either increase attempts from high-percentage shooters or shift offensive emphasis toward mid-range and interior scoring until three-point depth improves.
-
-### 4. Sharpen Free Throw Execution in Pressure Situations
-76.9% from the line is acceptable but not a weapon — particularly in close games where late-game fouling is a strategic tool for opponents. Getting to 80%+ as a team, through focused practice reps and consistent pre-shot routines, could directly convert several of those narrow losses into wins across a 40-game season.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- ESPN Public API (no key required)
 
 ---
 
-## Setup
+## Key Questions
+
+This analysis explores:
+
+- How did the Sparks' scoring output trend across the season relative to league average?
+- Where does LA's shooting efficiency (FG%, 3P%, FT%) stand compared to the rest of
+  the league?
+- Which players drove the most offensive production?
+- What does the point differential distribution reveal about competitiveness and
+  close-game performance?
+
+---
+
+## Key Findings
+
+**The Sparks were a close-game team that couldn't finish.**
+LA finished 22–23 with an average point margin of -2.5 — meaning most losses were
+decided by a possession or less. The roster was competitive; execution in crunch time
+was the separator.
+
+**Kelsey Plum carried a disproportionate offensive load.**
+Plum finished as the team's top scorer at 19.5 PPG. Without a consistent 15+ PPG
+secondary option, opposing defenses could key in on her and limit the offense's
+ceiling.
+
+**Three-point efficiency was a drag on offensive rating.**
+The Sparks shot 33.7% from three — below the threshold where high-volume
+three-point shooting becomes a net positive. Improving this number or redistributing
+shot selection would have a direct impact on offensive output.
+
+**Free throw execution left wins on the table.**
+At 76.9% from the line, late-game fouling situations became a liability rather than
+an asset. In a season decided by margins of 1–5 points, free throw improvement
+directly translates to wins.
+
+---
+
+## Visualization
+
+![LA Sparks 2025 Season Analysis](assets/sparks_2025_analysis.png)
+
+---
+
+## 2026 Points of Emphasis
+
+| Priority | Focus Area | Rationale |
+|---|---|---|
+| 1 | Late-game execution | 22–23 record at -2.5 avg margin; games were there to win |
+| 2 | Secondary scoring | Over-reliance on Plum makes offense one-dimensional |
+| 3 | Three-point shot selection | 33.7% efficiency hurts more than it helps at high volume |
+| 4 | Free throw consistency | 76.9% FT in close games is a winnable margin |
+
+---
+
+## Project Structure
+
+```
+wnba-stats-analysis/
+│
+├── assets/                  # Charts and visualizations
+├── analysis.py              # Data fetch, analysis, and visualization
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Run It
 
 ```bash
 pip install -r requirements.txt
@@ -39,7 +93,3 @@ python analysis.py
 ```
 
 Output is saved to `assets/sparks_2025_analysis.png`.
-
-## Data Source
-
-[ESPN Public API](https://site.api.espn.com) — no API key required.
